@@ -1,0 +1,33 @@
+{
+  "name": "purejs-color-picker",
+  "version": "1.0.1",
+  "description": "A Simple Color-picker for any type of JavaScript project with RGB and Hexadecimal color models.",
+  "main": "src/index.js",
+  "author": "Nitish Kumar Singh",
+  "license": "MIT",
+  "homepage": "https://code.nkslearning.com/blogs/pure-js-color-picker-home-page_65b208fd17df115bb28b",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NKSCodingLearnings/PureJs-Color-Picker"
+  },
+  "bugs": {
+    "url": "https://github.com/NKSCodingLearnings/PureJs-Color-Picker/issues"
+  },
+  "keywords": [
+    "purejs color picker",
+    "simple color picker",
+    "react color picker",
+    "lightweight color picker",
+    "zero dependency color picker",
+    "colors",
+    "color picker",
+    "color picker dialog"
+  ],
+  "sideEffects": false,
+  "files": [
+    "src",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ]
+}

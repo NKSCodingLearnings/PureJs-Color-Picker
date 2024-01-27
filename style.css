@@ -1,0 +1,170 @@
+/* Same CSS added in Color Picker shadow root as style tag */
+.colorPicker {
+  inset: 0;
+  max-width: 540px;
+  min-width: 300px;
+  position: fixed;
+  height: fit-content;
+  z-index: 5000;
+  background: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 3px 2px #5a5a5a;
+}
+.pickColor {
+  height: 40px;
+  box-shadow: inset 0 0 2px 3px #eee;
+  box-sizing: border-box;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.a,
+.b {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.a {
+  background: linear-gradient(to top, #000, transparent);
+}
+.b {
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  box-shadow: inset 0 0 3px 0#5a5a5a;
+}
+.c,
+.d,
+.e {
+  overflow: hidden;
+  position: relative;
+}
+.d {
+  aspect-ratio: 15/10;
+}
+.c,
+.e {
+  box-shadow: inset 0 0 3px 0#5a5a5a;
+  height: 25px;
+}
+.c {
+  background: linear-gradient(
+    to right,
+    red 0,
+    #ff0 17%,
+    #0f0 33%,
+    #0ff 50%,
+    #00f 67%,
+    #f0f 83%,
+    red 100%
+  );
+}
+.e {
+  background-image: url("${icons.transparent}");
+}
+.c *,
+.d *,
+.e * {
+  pointer-events: none;
+}
+.thumb {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c .thumb,
+.e .thumb {
+  transform: translateX(-50%);
+}
+.d .thumb {
+  transform: translate(-50%, -50%);
+}
+.thumb span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 13px;
+  box-sizing: border-box;
+  background: #ffffffe6;
+  border: 4px solid;
+  outline: 2px solid #fff;
+  transition: all 0.1s linear;
+}
+.c:hover .thumb span,
+.d:hover .thumb span,
+.e:hover .thumb span {
+  width: 20px;
+  height: 20px;
+}
+.colorPicker .parent {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  padding: 18px 0 3px;
+  gap: 15px;
+}
+.colorNow {
+  grid-column: 1;
+  grid-row: 1/3;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0 0 3px 0#5a5a5a;
+  background-image: url("${icons.transparent}");
+}
+.colorNow span {
+  border-radius: 25px;
+  position: absolute;
+  inset: 0;
+}
+.colorNow .copy {
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+  background: #0000006b url("${icons.copy}") center center no-repeat;
+  opacity: 0;
+}
+.colorNow .copy:hover {
+  opacity: 0.8;
+}
+.rgba {
+  width: 100%;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.rgba input {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: math;
+  font-size: medium;
+  line-height: 1.6;
+}
+.colorPicker button {
+  margin-left: 10px;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  opacity: 0.6;
+  background: #0000 url("${icons.unfold}") center center no-repeat;
+}
+.colorPicker button:hover {
+  opacity: 1;
+}
+.rgba input:focus-visible {
+  outline: 0;
+}
+.rgba span {
+  color: #838383;
+  font-weight: 700;
+  text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
